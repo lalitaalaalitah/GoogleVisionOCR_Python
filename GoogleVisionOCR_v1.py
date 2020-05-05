@@ -86,7 +86,7 @@ if __name__ == "__main__":
                                 )
 
                             except Exception as x:
-                                break
+                                print(x)
 
                         elif path_of_item.endswith(".txt"):
                             os.rename(
