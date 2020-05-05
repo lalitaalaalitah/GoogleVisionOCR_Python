@@ -1,7 +1,6 @@
 import io
 import os
 
-#! path_to_virtual_env
 from google.cloud import storage, vision
 
 
@@ -57,10 +56,7 @@ if __name__ == "__main__":
             # create folders to move converted images and ocr txt.
             path_for_converted_images = os.path.join(folder_path, "converted", "")
             path_for_txt = os.path.join(folder_path, "txt", "")
-            if not os.path.isdir(path_for_converted_images):
-                os.makedirs(path_for_converted_images)
-            if not os.path.isdir(path_for_txt):
-                os.makedirs(path_for_txt)
+
             # list all dir and files in the path provided.
             all_files_n_folders = os.listdir(folder_path)
             all_files = [
@@ -68,35 +64,36 @@ if __name__ == "__main__":
                 for item in all_files_n_folders
                 if os.path.isfile(os.path.join(folder_path, item))
             ]
-            while len(all_files) > 0:
+
+            if len(all_files) > 0:
+                if not os.path.isdir(path_for_converted_images):
+                    os.makedirs(path_for_converted_images)
+                if not os.path.isdir(path_for_txt):
+                    os.makedirs(path_for_txt)
                 try:
                     for path_of_item in all_files:
                         # print(item)
-                        if os.path.isfile(path_of_item):
+                        if os.path.isfile(path_of_item) and path_of_item.endswith(
+                            (".jpg", ".png")
+                        ):  # add more formats here, if needed
                             print(path_of_item)
-
-                            if path_of_item.endswith(
-                                (".jpg", ".png")
-                            ):  # add more formats here, if needed
-
-                                try:
-                                    detect_text(
-                                        client,
-                                        path_of_item,
-                                        path_for_converted_images,
-                                        path_for_txt,
-                                    )
-
-                                except Exception as x:
-                                    break
-
-                            elif path_of_item.endswith(".txt"):
-                                os.rename(
+                            try:
+                                detect_text(
+                                    client,
                                     path_of_item,
-                                    path_of_item.replace(folder_path, path_for_txt),
+                                    path_for_converted_images,
+                                    path_for_txt,
                                 )
-                            all_files.remove(path_of_item)
-                except:
-                    break
+
+                            except Exception as x:
+                                break
+
+                        elif path_of_item.endswith(".txt"):
+                            os.rename(
+                                path_of_item,
+                                path_of_item.replace(folder_path, path_for_txt),
+                            )
+                except Exception as x:
+                    print(x)
             else:
                 print("No images available.")
