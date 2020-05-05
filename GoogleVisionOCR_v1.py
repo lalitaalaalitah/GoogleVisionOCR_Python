@@ -1,3 +1,4 @@
+# Add your virtual environment path if needed
 import io
 import os
 
@@ -72,11 +73,11 @@ if __name__ == "__main__":
                     os.makedirs(path_for_txt)
                 try:
                     for path_of_item in all_files:
-                        # print(item)
+                        print(path_of_item)
                         if os.path.isfile(path_of_item) and path_of_item.endswith(
                             (".jpg", ".png")
                         ):  # add more formats here, if needed
-                            print(path_of_item)
+
                             try:
                                 detect_text(
                                     client,
@@ -88,11 +89,17 @@ if __name__ == "__main__":
                             except Exception as x:
                                 print(x)
 
-                        elif path_of_item.endswith(".txt"):
+                        elif os.path.isfile(path_of_item) and path_of_item.endswith(
+                            ".txt"
+                        ):
                             os.rename(
                                 path_of_item,
                                 path_of_item.replace(folder_path, path_for_txt),
                             )
+                        elif os.path.isfile(path_of_item) or os.path.isdir(
+                            path_of_item
+                        ):
+                            print("this file is not an image.")
                 except Exception as x:
                     print(x)
             else:
