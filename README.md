@@ -4,11 +4,11 @@
 1.  Install Python 3
 3.  Install dependencies
 
-        `python3 -m pip install google-cloud-vision`
+        python3 -m pip install google-cloud-vision
         
         Or
         
-        `pip install --upgrade google-cloud-vision`
+        pip install --upgrade google-cloud-vision
 3.  Copy the script to PATH if needed
 4.  Make the script executable.
 5.  Follow instructions on this page : https://cloud.google.com/vision/docs/before-you-begin
