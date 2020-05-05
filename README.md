@@ -1,7 +1,7 @@
 # GoogleVisionOCR_Python
  A script to use python for OCR using Google Vision API
 
-##Steps to setup
+## Steps to setup
 1.  Install Python 3
 2.  Install dependencies
 
