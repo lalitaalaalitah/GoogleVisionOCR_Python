@@ -3,7 +3,7 @@
 
 ## Steps to setup
 1.  Install Python 3
-2.  Install dependencies
+2.  Install dependencies (Check : https://cloud.google.com/python/setup for step 1 and step 2)
 
         python3 -m pip install google-cloud-vision
 
