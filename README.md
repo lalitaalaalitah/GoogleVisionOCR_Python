@@ -44,5 +44,6 @@
 10.  Now run the script as 
 
         path_to_script
+        
 
 11.  Follow instructions in the terminal and provide path to (file/folder)
