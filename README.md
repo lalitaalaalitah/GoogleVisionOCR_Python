@@ -41,9 +41,10 @@
         chcp 65001
 
         set PYTHONIOENCODING=utf-8
+        
 10.  Now run the script as 
 
         path_to_script
-        
+
 
 11.  Follow instructions in the terminal and provide path to (file/folder)
