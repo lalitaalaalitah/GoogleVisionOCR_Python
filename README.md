@@ -31,7 +31,12 @@
         chmod +x path_to_script
  
 8.  Windows users should check whether their terminal is using utf-8 encoding or not
-       chcp 65001
-       set PYTHONIOENCODING=utf-8
 
-9.  Follow instructions in the terminal and provide path to (file/folder)
+        chcp 65001
+
+        set PYTHONIOENCODING=utf-8
+9.  Now run the script as 
+
+        path_to_script
+
+10.  Follow instructions in the terminal and provide path to (file/folder)
