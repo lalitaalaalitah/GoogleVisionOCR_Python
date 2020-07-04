@@ -23,20 +23,26 @@
         - Set up Authentication
 
     **Note: You may get an offer to avail USD 300 credit for usage. Accept that. It may enable you to OCR without charges for a few thousand images.**
-4.  Open the script and search for "path_to_secret_key.json" and replace it with path of your .json authentication file(which you downloaded while following instructions from 3.)
-5.  Save the script.
-6.  If needed copy it to system PATH, so that you can call it from anywhere.
-7.  Make the script executable.
+
+4.  Download latest version of the script. Older version are kept just to learn from errors. Don't use older versions.
+
+5.  Open the script and search for "path_to_secret_key.json" and replace it with path of your .json authentication file(which you downloaded while following instructions from 3.)
+
+6.  Save the script.
+
+7.  If needed copy it to system PATH, so that you can call it from anywhere.
+
+8.  Make the script executable.
 
         chmod +x path_to_script
  
-8.  Windows users should check whether their terminal is using utf-8 encoding or not
+9.  Windows users should check whether their terminal is using utf-8 encoding or not
 
         chcp 65001
 
         set PYTHONIOENCODING=utf-8
-9.  Now run the script as 
+10.  Now run the script as 
 
         path_to_script
 
-10.  Follow instructions in the terminal and provide path to (file/folder)
+11.  Follow instructions in the terminal and provide path to (file/folder)
