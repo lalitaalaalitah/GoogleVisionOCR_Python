@@ -39,7 +39,7 @@ def detect_text(
     txt_file_name = path_of_image_file_tail + ".txt"
     txt_file_path = os.path.join(path_for_converted_txt, txt_file_name)
     # write to txt file
-    if host_os_name == "Windows":
+    if "Windows" in host_os_name:
         with open(txt_file_path, "w", encoding="utf-8") as tfn:
             tfn.write(texts)
     else:
