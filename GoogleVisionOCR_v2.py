@@ -12,6 +12,7 @@ Use this script to OCR images.
 # Get OS name
 host_os_name = platform.system()
 
+
 def detect_text(client, path, path_for_converted_images, path_for_txt, host_os_name):
     """Detects text in the file."""
     with io.open(path, "rb") as image_file:
@@ -30,8 +31,8 @@ def detect_text(client, path, path_for_converted_images, path_for_txt, host_os_n
     # generate txt file path
     txt_file_name = path_for_txt + path_tail + ".txt"
     # write to txt file
-    if host_os_name == 'Windows':
-        with open(txt_file_name, "w", encoding='utf-8') as tfn:
+    if host_os_name == "Windows":
+        with open(txt_file_name, "w", encoding="utf-8") as tfn:
             tfn.write(texts)
     else:
         with open(txt_file_name, "w") as tfn:
