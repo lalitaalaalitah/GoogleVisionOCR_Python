@@ -29,5 +29,9 @@
 7.  Make the script executable.
 
         chmod +x path_to_script
+ 
+8.  Windows users should check whether their terminal is using utf-8 encoding or not
+       chcp 65001
+       set PYTHONIOENCODING=utf-8
 
-8.  Follow instructions in the terminal and provide path to (file/folder)
+9.  Follow instructions in the terminal and provide path to (file/folder)
