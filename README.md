@@ -24,7 +24,7 @@
 
     **Note: You may get an offer to avail USD 300 credit for usage. Accept that. It may enable you to OCR without charges for a few thousand images.**
 
-4.  Download latest version of the script. Older version are kept just to learn from errors. Don't use older versions.
+4.  Download latest version of the script which has name like **GoogleVisionOCR_v***. Older version are kept just to learn from errors. Don't use older versions.
 
 5.  Open the script and search for "path_to_secret_key.json" and replace it with path of your .json authentication file(which you downloaded while following instructions from 3.)
 
