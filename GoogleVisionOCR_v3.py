@@ -29,7 +29,18 @@ def detect_text(
 
     response = client.document_text_detection(
         image=image
-    )  # client.text_detection(image=image)#change to client.document_text_detection(image=image) for scanned books
+    )
+    #image_context={"language_hints":['sa']} should be uused to specify language ----
+    # response = client.document_text_detection(
+    #     image=image,
+    #     image_context={"language_hints":['sa']}
+    # )
+    
+    # client.text_detection(image=image) can be used for non-book image
+    
+    #change to client.document_text_detection(image=image) for scanned books
+    
+    # extract the text here.
     texts = response.text_annotations[0].description
     print(f"Texts:\n{texts}")
     # Generate file name to save ocr text.
